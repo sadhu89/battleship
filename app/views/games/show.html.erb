@@ -1,0 +1,23 @@
+<table>
+<% @enemy_cells.each do |row|%>
+	<tr>
+	<% row.each do |cell|%>
+    <td>
+      <%= button_tag Cell.find(cell).hit %>
+    </td>
+  <% end %>
+  </tr>
+<% end %>
+</table>
+
+<table>
+<% @cells.each do |row|%>
+  <tr>
+  <% row.each do |cell|%>
+    <td>
+      <%= check_box_tag Cell.find(cell).hit %>
+    </td>
+  <% end %>
+  </tr>
+<% end %>
+</table>
